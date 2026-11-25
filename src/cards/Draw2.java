@@ -10,7 +10,7 @@ public class Draw2 extends Card {
 
     @Override
     public boolean canPlay(Card top) {
-        return top.getValue().equals("Draw2") || this.getColor().equals(top.getColor());
+        return top.getValue().equals("Draw2") || this.getColor().equals(top.getColor()) || anyCanPlay(top);
     }
 
     @Override

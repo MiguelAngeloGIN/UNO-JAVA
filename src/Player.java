@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Player {
     private final String name;
-    private ArrayList<Card> cards = new ArrayList<Card>();
-    private ArrayList<Card> playableCards = new ArrayList<Card>();
+    private final ArrayList<Card> cards = new ArrayList<Card>();
+    private final ArrayList<Card> playableCards = new ArrayList<Card>();
 
     Player(String name){
         this.name = name;
@@ -14,11 +14,9 @@ public class Player {
     public String getName() {
         return name;
     }
-
     public ArrayList<Card> getCards(){
         return new ArrayList<>(cards);
     }
-
     public ArrayList<Card> getPlayableCards(){
         return new ArrayList<>(this.playableCards);
     }

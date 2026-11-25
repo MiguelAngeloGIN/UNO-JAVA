@@ -5,16 +5,18 @@ import java.util.Stack;
 
 public class EffectHandler {
 
-    public static int effectHandler(Card card, Player player, ArrayList<Player> sequence,
+    public static void effectHandler(Card card, Player player,
+                                    ArrayList<Player> sequence,
                                     Stack<Card> drawDeck) {
-        Effect effect = card.getEffect();
-        int cur = sequence.indexOf(player);
+        /*
+           Reverse and Skip are handled entirely in Game
+           because they only affect turn progression.
+         */
 
+        Effect effect = card.getEffect();
 
         switch (effect){
             case DRAW2:
-                cur ++;
-                player = sequence.get(cur);
                 for (int i = 1; i < 3; i++) {
                     Card drawnCard = drawDeck.pop();
                     player.addCard(drawnCard);
@@ -22,24 +24,16 @@ public class EffectHandler {
                 break;
 
             case DRAW4:
+
+                for (int i = 1; i < 5; i++) {
+                    Card drawnCard = drawDeck.pop();
+                    player.addCard(drawnCard);
+                }
                 break;
 
-            case REVERSE:
-                cur-=1;
-                break;
 
-            case SKIP:
-                cur+=2;
-                break;
 
-            case WILDCARD:
-                break;
-
-            case NONE:
-                cur++;
-                break;
 
         }
-        return cur;
     }
 }

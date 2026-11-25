@@ -28,6 +28,10 @@ public abstract class Card {
 
     public abstract boolean canPlay(Card top);
 
+    public boolean anyCanPlay(Card top){
+       return top.getEffect().equals(Effect.DRAW4) || top.getEffect().equals(Effect.WILDCARD);
+    }
+
     public String message() {
         return "";
     }

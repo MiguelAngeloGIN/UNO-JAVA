@@ -10,7 +10,7 @@ public class Skip extends Card {
 
     @Override
     public boolean canPlay(Card top) {
-        return top.getValue().equals("Skip") || top.getColor().equals(this.getColor());
+        return top.getValue().equals("Skip") || top.getColor().equals(this.getColor()) || anyCanPlay(top);
     }
 
     @Override

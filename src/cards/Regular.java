@@ -11,6 +11,6 @@ public class Regular extends Card {
 
     @Override
     public boolean canPlay(Card top) {
-        return getColor().equals(top.getColor()) || getValue().equals(top.getValue());
+        return getColor().equals(top.getColor()) || getValue().equals(top.getValue()) || anyCanPlay(top);
     }
 }
