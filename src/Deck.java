@@ -4,8 +4,8 @@ import java.util.Stack;
 import java.util.Collections;
 
 public class Deck {
-    Stack<Card> drawDeck = new Stack<Card>();
-    Stack<Card> discardDeck = new Stack<Card>();
+    private Stack<Card> drawDeck = new Stack<Card>();
+    private Stack<Card> discardDeck = new Stack<Card>();
 
     public Deck() {
         createCards();
@@ -49,5 +49,24 @@ public class Deck {
             Card draw2 = new Draw2(color);
             drawDeck.push(draw2);
         }
+    }
+
+    public Card drawCard() {
+       return drawDeck.pop();
+    }
+
+    public void playCard(Card card) {
+        discardDeck.push(card);
+    }
+
+    public void refillDrawDeck() {
+        Card top = discardDeck.pop();
+        Collections.shuffle(discardDeck);
+
+        while (!discardDeck.isEmpty()) {
+            Card card =  discardDeck.pop();
+            drawDeck.push(card);
+        }
+        discardDeck.push(top);
     }
 }

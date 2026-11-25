@@ -1,5 +1,6 @@
 ### IntelliJ IDEA ###
 .idea/
+desktop.ini
 *.iml
 out/
 !**/src/main/**/out/

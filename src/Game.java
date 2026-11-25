@@ -37,6 +37,7 @@ public class Game {
         }
     }
 
+
     public void createColoredCards(){
         for(Color color : Color.values()){
             Card zero = new Zero(color);
@@ -113,7 +114,6 @@ public class Game {
     public void playCard(Card card, Card top, Player player){
         if (card.canPlay(top)){
             discardDeck.push(card);
-            card.applyEffect(sequence);
             player.removeCard(card);
         }
 
