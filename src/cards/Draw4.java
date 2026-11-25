@@ -5,7 +5,7 @@ import enums.Effect;
 
 public class Draw4 extends Card {
     public Draw4() {
-        super(Color.NONE, "cards.Draw4", Effect.DRAW4);
+        super(Color.NONE, "Draw4", Effect.DRAW4);
     }
 
     @Override
@@ -15,7 +15,7 @@ public class Draw4 extends Card {
 
     @Override
     public String message() {
-        return "DRAW 4";
+        return "DRAW 4!!!";
     }
 
 }

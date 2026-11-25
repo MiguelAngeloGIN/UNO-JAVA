@@ -5,7 +5,7 @@ import enums.Effect;
 
 public class WildCard extends Card {
     public WildCard() {
-        super(Color.NONE, "cards.WildCard", Effect.WILDCARD);
+        super(Color.NONE, "WildCard", Effect.WILDCARD);
     }
 
     @Override

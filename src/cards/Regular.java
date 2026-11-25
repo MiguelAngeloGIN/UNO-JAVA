@@ -3,9 +3,9 @@ package cards;
 import enums.Color;
 import enums.Effect;
 
-public class RegularCard extends Card {
+public class Regular extends Card {
 
-    public RegularCard(Color color, String value) {
+    public Regular(Color color, String value) {
         super(color, value, Effect.NONE);
     }
 

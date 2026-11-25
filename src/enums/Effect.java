@@ -6,5 +6,6 @@ public enum Effect {
     REVERSE,
     SKIP,
     WILDCARD,
+    ZERO,
     NONE
 }
