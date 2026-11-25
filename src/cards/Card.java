@@ -28,10 +28,6 @@ public abstract class Card {
 
     public abstract boolean canPlay(Card top);
 
-    public boolean canPlayAgain(Card top) {
-        return this.value.equals(top.getValue());
-    }
-
     public String message() {
         return "";
     }

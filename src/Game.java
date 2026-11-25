@@ -82,34 +82,8 @@ public class Game {
 
     }
 
-    public int effectHandler(Card card, LinkedList<Player> sequence, Player player ){
-        Effect effect = card.getEffect();
-        int cur = sequence.indexOf(player);
 
-        switch (effect){
-            case DRAW2:
-                drawDeck.push(card);
-                break;
-            case DRAW4:
-                discardDeck.push(card);
-                break;
-            case REVERSE:
-                drawDeck.push(card);
-                break;
-            case SKIP:
-                discardDeck.push(card);
-                break;
-            case WILDCARD:
 
-                break;
-            case NONE:
-                cur++;
-                break;
-
-        }
-
-        return cur;
-    }
 
     public void playCard(Card card, Card top, Player player){
         if (card.canPlay(top)){

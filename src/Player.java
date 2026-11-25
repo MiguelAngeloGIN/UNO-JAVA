@@ -23,6 +23,16 @@ public class Player {
         return new ArrayList<>(this.playableCards);
     }
 
+
+    public void hasPlayableCards(Card top) {
+        playableCards.clear();
+        for(Card card : this.cards){
+            if (card.canPlay(top)){
+                playableCards.add(card);
+            }
+        }
+    }
+
     public Card chooseCard(Card card){
         if(this.cards.contains(card)){
             return card;
