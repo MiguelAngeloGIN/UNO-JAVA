@@ -21,6 +21,10 @@ public class Player {
         return new ArrayList<>(this.playableCards);
     }
 
+    public void clearCards(){
+        cards.clear();
+    }
+
 
     public void hasPlayableCards(Card top) {
         playableCards.clear();
@@ -44,6 +48,10 @@ public class Player {
 
     public void addCard(Card card){
         this.cards.add(card);
+    }
+
+    public ArrayList<Card> copyCards() {
+        return new ArrayList<>(cards);
     }
 }
 
